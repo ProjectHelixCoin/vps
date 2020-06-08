@@ -746,7 +746,7 @@ generate=0;
 startnodes=0;
 
 # Execute getopt
-ARGS=$(getopt -o "hp:n:c:r:wsudxgk:k2:k3:k4:k5:k6:k7:k8:k9:k10:k11:k12:k13:k14:k15:k16:17:k18:k19:k20:k21:k22:k23:k24:k25:k26:k27:k28:k29:k30:k31:k32:k33:k34:k35:k36:k37:k38:k39:k40:k41:k42:k43:k44:k45:k46:k47:k48:k49:k50:k51:k52:k53:k54:k55:k56:k57:k58:k59:k60:k61:k62:k63:k64:k65:k66:k67:k68:k69:k70:k71:k72:k73:k74:k75:k76:k77:k78:k79:k80:k81:k82:k83:k84:k85:k86:k87:k88:k89:k90:k91:k92:k93:k94:k95:k96:k97:k98:k99:k100:k101:k102:k103:k104:k105:k106:k107:k108:k109:k110:k111:k112:k113:k114:k115:k116:k117:k118:k119:k120" -l "help,project:,net:,count:,release:,wipe,sentinel,update,debug,startnodes,generate,key:,key2:,key3:,key4:,key5:,key6:,key7:,key8:,key9:,key10:,key11:,key12:,key13:,key14:,key15:,key16:,key17:,key18:,key19:,key20:,key21:,key22:,key23:,key24:,key25:,key26:,key27:,key28:,key29:,key30:,key31:,key32:,key33:,key34:,key35:,key36:,key37:,key38:,key39:,key40:,key41:,key42:,key43:,key44:,key45:,key46:,key47:,key48:,key49:,key50:,key51:,key52:,key53:,key54:,key55:,key56:,key57:,key58:,key59:,key60:,key61:,key62:,key63:,key64:,key65:,key66:,key67:,key68:,key69:,key70:,key71:,key72:,key73:,key74:,key75:,key76:,key77:,key78:,key79:,key80:,key81:,key82:,key83:,key84:,key85:,key86:,key87:,key88:,key89:,key90:,key91:,key92:,key93:,key94:,key95:,key96:,key97:,key98:,key99:,key100:,key101:,key102:,key103:,key104:,key105:,key106:,key107:,key108:,key109:,key110:,key111:,key112:,key113:,key114:,key115:,key116:,key117:,key118:,key119:,key120:" -n "install.sh" -- "$@");
+ARGS=$(getopt -o "hp:n:c:r:wsudxgk:k2:k3:k4:k5:k6:k7:k8:k9:k10:k11:k12:k13:k14:k15:k16:17:k18:k19:k20:k21:k22:k23:k24:k25:k26:k27:k28:k29:k30:k31:k32:k33:k34:k35:k36:k37:k38:k39:k40:k41:k42:k43:k44:k45:k46:k47:k48:k49:k50:k51:k52:k53:k54:k55:k56:k57:k58:k59:k60:k61:k62:k63:k64:k65:k66:k67:k68:k69:k70:k71:k72:k73:k74:k75:k76:k77:k78:k79:k80:k81:k82:k83:k84:k85:k86:k87:k88:k89:k90:k91:k92:k93:k94:k95:k96:k97:k98:k99:k100:k101:k102:k103:k104:k105:k106:k107:k108:k109:k110:k111:k112:k113:k114:k115:k116:k117:k118:k119:k120:k121" -l "help,project:,net:,count:,release:,wipe,sentinel,update,debug,startnodes,generate,key:,key2:,key3:,key4:,key5:,key6:,key7:,key8:,key9:,key10:,key11:,key12:,key13:,key14:,key15:,key16:,key17:,key18:,key19:,key20:,key21:,key22:,key23:,key24:,key25:,key26:,key27:,key28:,key29:,key30:,key31:,key32:,key33:,key34:,key35:,key36:,key37:,key38:,key39:,key40:,key41:,key42:,key43:,key44:,key45:,key46:,key47:,key48:,key49:,key50:,key51:,key52:,key53:,key54:,key55:,key56:,key57:,key58:,key59:,key60:,key61:,key62:,key63:,key64:,key65:,key66:,key67:,key68:,key69:,key70:,key71:,key72:,key73:,key74:,key75:,key76:,key77:,key78:,key79:,key80:,key81:,key82:,key83:,key84:,key85:,key86:,key87:,key88:,key89:,key90:,key91:,key92:,key93:,key94:,key95:,key96:,key97:,key98:,key99:,key100:,key101:,key102:,key103:,key104:,key105:,key106:,key107:,key108:,key109:,key110:,key111:,key112:,key113:,key114:,key115:,key116:,key117:,key118:,key119:,key120:,key121:" -n "install.sh" -- "$@");
 
 #Bad arguments
 if [ $? -ne 0 ];
@@ -1777,6 +1777,14 @@ while true; do
                     if [ -n "$1" ];
                     then
                         PRIVKEY[120]="$1";
+                        shift;
+                    fi
+            ;;
+				     -k121 |--key121)
+            shift;
+                    if [ -n "$1" ];
+                    then
+                        PRIVKEY[121]="$1";
                         shift;
                     fi
             ;;
